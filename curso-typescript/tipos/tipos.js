@@ -16,3 +16,10 @@ minhaIdade = 27;
 console.log("typeof minhaIdade", typeof minhaIdade);
 // minhaIdade = "27";
 console.log("typeof minhaIdade", typeof minhaIdade);
+//array
+//array do tipo any[]
+var hobbies = ["Cozinha", "Pratica esportes"];
+console.log("hobbies[0]:", hobbies[0]);
+console.log("typeof hobbies", typeof hobbies);
+hobbies = [100, 200, 300];
+console.log("hobbies", hobbies);
