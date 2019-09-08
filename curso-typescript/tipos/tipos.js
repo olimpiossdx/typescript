@@ -23,3 +23,8 @@ console.log("hobbies[0]:", hobbies[0]);
 console.log("typeof hobbies", typeof hobbies);
 hobbies = [100, 200, 300];
 console.log("hobbies", hobbies);
+//tupla
+var endereco = ["Av Principal", 123, ""];
+console.log("endereco:", endereco);
+endereco = ["Rua Importante", 123, "Bloco C"];
+console.log("endereco:", endereco);
