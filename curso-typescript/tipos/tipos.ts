@@ -52,3 +52,9 @@ console.log("Cor.Cinza", Cor.Cinza);
 console.log("Cor.Verde", Cor.Verde);
 console.log("Cor.Amarelo", Cor.Amarelo);
 console.log("Cor.Vermelho", Cor.Vermelho);
+
+// tipo any
+let carro: any = "BMW";
+console.log("carro", carro);
+carro = { marca: "BMW", ano: 2019 };
+console.log("carro", carro);
