@@ -50,3 +50,18 @@ var carro = "BMW";
 console.log("carro", carro);
 carro = { marca: "BMW", ano: 2019 };
 console.log("carro", carro);
+//funções
+function retornaMeuNome() {
+    // return minhaIdade;
+    return nome;
+}
+console.log("retornaMeuNome()", retornaMeuNome());
+function DigaOi() {
+    console.log("oi");
+    // return minhaIdade
+}
+function multiplicar(numA, numB) {
+    return numA * numB;
+}
+// console.log("multiplicar(2,'Bia')", multiplicar(2, "Bia"));
+console.log("multiplicar(2,5)", multiplicar(2, 5));
