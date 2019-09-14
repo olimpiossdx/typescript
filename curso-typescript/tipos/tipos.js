@@ -28,3 +28,20 @@ var endereco = ["Av Principal", 123, ""];
 console.log("endereco:", endereco);
 endereco = ["Rua Importante", 123, "Bloco C"];
 console.log("endereco:", endereco);
+// enums
+var Cor;
+(function (Cor) {
+    Cor[Cor["Cinza"] = 0] = "Cinza";
+    Cor[Cor["Verde"] = 100] = "Verde";
+    Cor[Cor["Azul"] = 101] = "Azul";
+    Cor[Cor["Laranja"] = 102] = "Laranja";
+    Cor[Cor["Amarelo"] = 103] = "Amarelo";
+    Cor[Cor["Vermelho"] = 104] = "Vermelho";
+})(Cor || (Cor = {}));
+var minhaCor = Cor.Verde;
+console.log("minhaCor", minhaCor);
+console.log("Cor.Azul", Cor.Azul);
+console.log("Cor.Cinza", Cor.Cinza);
+console.log("Cor.Verde", Cor.Verde);
+console.log("Cor.Amarelo", Cor.Amarelo);
+console.log("Cor.Vermelho", Cor.Vermelho);
