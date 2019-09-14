@@ -60,6 +60,7 @@ function DigaOi() {
     console.log("oi");
     // return minhaIdade
 }
+DigaOi();
 function multiplicar(numA, numB) {
     return numA * numB;
 }

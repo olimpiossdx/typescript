@@ -72,6 +72,8 @@ function DigaOi(): void {
   // return minhaIdade
 }
 
+DigaOi();
+
 function multiplicar(numA: number, numB: number): number {
   return numA * numB;
 }
