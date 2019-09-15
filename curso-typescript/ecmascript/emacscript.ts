@@ -85,3 +85,16 @@ function contagemRegressiva(
 }
 contagemRegressiva();
 contagemRegressiva(5);
+
+// operadoor rest ou spread
+const numbers = [1, 10, 99 - 5];
+
+// jeito antigo
+console.log('Math.max()', Math.max(numbers[0], numbers[1], numbers[2]));
+
+//jeito novo
+console.log('Math.max(spread)', Math.max(...numbers));
+
+const turmaA: string[] = ['João', 'Maria', 'Fernanda'];
+const turmaB: string[] = ['Fernando', 'Miguel', 'Lorena', ...turmaA];
+console.log('turmaB', turmaB);

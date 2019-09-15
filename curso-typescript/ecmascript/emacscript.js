@@ -67,3 +67,12 @@ function contagemRegressiva(inicio, fim) {
 }
 contagemRegressiva();
 contagemRegressiva(5);
+// operadoor rest ou spread
+var numbers = [1, 10, 99 - 5];
+// jeito antigo
+console.log('Math.max()', Math.max(numbers[0], numbers[1], numbers[2]));
+//jeito novo
+console.log('Math.max(spread)', Math.max.apply(Math, numbers));
+var turmaA = ['João', 'Maria', 'Fernanda'];
+var turmaB = ['Fernando', 'Miguel', 'Lorena'].concat(turmaA);
+console.log('turmaB', turmaB);
