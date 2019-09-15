@@ -48,3 +48,24 @@ console.log('somar(2,2)', somar(2, 2));
 
 const subtrair = (n1: number, n2: number): number => n1 - n2;
 console.log('subtrair(3,2)', subtrair(3, 2));
+
+const saudacao = () => console.log('Olá');
+saudacao();
+
+const falarCom = (pessoa: string) => console.log('Ola + pessoa =', pessoa);
+falarCom('Jujé');
+
+// this
+
+// function normalComThis() {
+//   console.log('this', this);
+// }
+// normalComThis();
+// // const normalComThisEspecial = normalComThis.bind(2);
+// const normalComThisEspecial = normalComThis.bind({ nome: 'Ana' });
+// normalComThisEspecial();
+
+// // this ???
+// console.log('this', this);
+// const arrowComThis = () => console.log('this', this);
+// arrowComThis();
