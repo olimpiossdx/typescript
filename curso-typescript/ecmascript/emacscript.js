@@ -102,3 +102,10 @@ function tuplaParam2() {
     console.log("2) " + params[0] + " " + params[1] + " " + params[2]);
 }
 tuplaParam2.apply(void 0, tupla);
+//destructuring (array)
+var caracteristica = ['motor Zetec 1.8', 2020];
+// const motor = caracteristica[0];
+// const ano = caracteristica[1]
+var motor = caracteristica[0], ano = caracteristica[1];
+console.log(motor);
+console.log(ano);
