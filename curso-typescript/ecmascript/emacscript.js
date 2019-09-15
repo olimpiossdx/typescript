@@ -208,9 +208,10 @@ function esperar3sPromise() {
     });
 }
 esperar3sPromise().then(dado => console.log('dado(Usando Promoise):', dado));
-// fetch('https://swapi.co/api/people/1')
-//   .then(response => response.json())
-//   .then(personagem => console.log('dado', personagem.films))
-//   .then(films => fetch(films[0]))
-//   .then(resFilm => resFilm.json())
-//   .then(filme => console.log('filme', filme));
+fetch('https://swapi.co/api/people/1')
+    .then(res => res.json())
+    .then(personagem => personagem.films)
+    .then(films => fetch(films[0]))
+    .then(resFilm => resFilm.json())
+    .then(filme => console.log(filme.title))
+    .catch(err => console.log('Catch!!!!' + err));
