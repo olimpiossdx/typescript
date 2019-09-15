@@ -158,3 +158,18 @@ const {
 console.log('n', n);
 console.log('p', p);
 console.log('w', w);
+
+// template string
+
+const usuarioID: string = 'SuporteCod3r';
+const notificacoes: string = '19';
+const boasVindas = 'Boas vindas ' + usuarioID + 'Notificações: ' + notificacoes;
+console.log('boasVindas', boasVindas);
+
+const boasVindasTemplateString = `
+            Boas vindas ${usuarioID}, 
+            Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}`;
+
+console.log('boasVindasTemplateString', boasVindasTemplateString);
+console.log('templateString', `${(1 + 1) * 30}`);
+console.log('templateString', `Mtoro :${caracteristica[0]}`);

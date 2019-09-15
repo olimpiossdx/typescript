@@ -125,3 +125,12 @@ var n = item.nome, p = item.preco, w = item.caracteristica.w;
 console.log('n', n);
 console.log('p', p);
 console.log('w', w);
+// template string
+var usuarioID = 'SuporteCod3r';
+var notificacoes = '19';
+var boasVindas = 'Boas vindas ' + usuarioID + 'Notificações: ' + notificacoes;
+console.log('boasVindas', boasVindas);
+var boasVindasTemplateString = "\n            Boas vindas " + usuarioID + ", \n            Notifica\u00E7\u00F5es: " + (parseInt(notificacoes) > 9 ? '+9' : notificacoes);
+console.log('boasVindasTemplateString', boasVindasTemplateString);
+console.log('templateString', "" + (1 + 1) * 30);
+console.log('templateString', "Mtoro :" + caracteristica[0]);
