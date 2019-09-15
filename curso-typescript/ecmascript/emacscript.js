@@ -1,13 +1,13 @@
 "use strict";
 // let & const
-var seraQuePode = '?'; //hoisting
+let seraQuePode = '?'; //hoisting
 console.log('seraQuePode', seraQuePode);
-var estaFrio = true;
+let estaFrio = true;
 if (estaFrio) {
-    var acao = 'Colocar o casaco!!';
+    let acao = 'Colocar o casaco!!';
     console.log('acao', acao);
 }
-var cpf = '123.456.000-99';
+const cpf = '123.456.000-99';
 // // cpf = '789.101.132-78';
 console.log('cpf', cpf);
 var segredo = 'externo!';
@@ -19,16 +19,16 @@ revelar();
 console.log('segredo-externo', segredo);
 {
     {
-        var def = 'def';
+        const def = 'def';
         console.log('def', def);
     }
 }
-for (var i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
     console.log('i =', i);
 }
 // console.log('i', i);
 // Arrow Function
-var somar = function (n1, n2) {
+const somar = function (n1, n2) {
     return n1 + n2;
 };
 //ou
@@ -36,11 +36,11 @@ var somar = function (n1, n2) {
 //     return n1 + n2;
 //   };
 console.log('somar(2,2)', somar(2, 2));
-var subtrair = function (n1, n2) { return n1 - n2; };
+const subtrair = (n1, n2) => n1 - n2;
 console.log('subtrair(3,2)', subtrair(3, 2));
-var saudacao = function () { return console.log('Olá'); };
+const saudacao = () => console.log('Olá');
 saudacao();
-var falarCom = function (pessoa) { return console.log('Ola + pessoa =', pessoa); };
+const falarCom = (pessoa) => console.log('Ola + pessoa =', pessoa);
 falarCom('Jujé');
 // this
 // function normalComThis() {
@@ -55,9 +55,7 @@ falarCom('Jujé');
 // const arrowComThis = () => console.log('this', this);
 // arrowComThis();
 // Parâmetros padrão
-function contagemRegressiva(inicio, fim) {
-    if (inicio === void 0) { inicio = 3; }
-    if (fim === void 0) { fim = inicio - 5; }
+function contagemRegressiva(inicio = 3, fim = inicio - 5) {
     console.log('inicio', inicio);
     while (inicio >= fim) {
         inicio--;
@@ -68,72 +66,66 @@ function contagemRegressiva(inicio, fim) {
 contagemRegressiva();
 contagemRegressiva(5);
 // operadoor rest ou spread
-var numbers = [1, 10, 99 - 5];
+const numbers = [1, 10, 99 - 5];
 // jeito antigo
 console.log('Math.max()', Math.max(numbers[0], numbers[1], numbers[2]));
 //jeito novo
-console.log('Math.max(spread)', Math.max.apply(Math, numbers));
-var turmaA = ['João', 'Maria', 'Fernanda'];
-var turmaB = ['Fernando', 'Miguel', 'Lorena'].concat(turmaA);
+console.log('Math.max(spread)', Math.max(...numbers));
+const turmaA = ['João', 'Maria', 'Fernanda'];
+const turmaB = ['Fernando', 'Miguel', 'Lorena', ...turmaA];
 console.log('turmaB', turmaB);
 // operador rest !!
-function retornarArray() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
+function retornarArray(...args) {
     return args;
 }
-var numeros = retornarArray(1, 2, 3, 4, 5, 6);
+const numeros = retornarArray(1, 2, 3, 4, 5, 6);
 console.log('numeros', numeros);
-console.log('retornarArray()', retornarArray.apply(void 0, numbers));
+console.log('retornarArray()', retornarArray(...numbers));
 // Rest e Spread (tupla)
-var tupla = [1, 'abc', false];
+const tupla = [1, 'abc', false];
 function tuplaParam1(a, b, c) {
-    console.log("1) " + a + " " + b + " " + c);
+    console.log(`1) ${a} ${b} ${c}`);
 }
-tuplaParam1.apply(void 0, tupla);
-function tuplaParam2() {
-    var params = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        params[_i] = arguments[_i];
-    }
+tuplaParam1(...tupla);
+function tuplaParam2(...params) {
     console.log('Array.isArray(params)', Array.isArray(params));
-    console.log("2) " + params[0] + " " + params[1] + " " + params[2]);
+    console.log(`2) ${params[0]} ${params[1]} ${params[2]}`);
 }
-tuplaParam2.apply(void 0, tupla);
+tuplaParam2(...tupla);
 //destructuring (array)
-var caracteristica = ['motor Zetec 1.8', 2020];
+const caracteristica = ['motor Zetec 1.8', 2020];
 // const motor = caracteristica[0];
 // const ano = caracteristica[1]
-var motor = caracteristica[0], ano = caracteristica[1];
+const [motor, ano] = caracteristica;
 console.log(motor);
 console.log(ano);
 //destructuring (Objeto)
-var item = {
+const item = {
     nome: 'SSD 480G',
     preco: 200,
     caracteristica: {
         w: 'Importado'
     }
 };
-var nomeItem = item.nome;
-var precoItem = item.preco;
+const nomeItem = item.nome;
+const precoItem = item.preco;
 console.log('nomeItem', nomeItem);
 console.log('precoItem', precoItem);
-var n = item.nome, p = item.preco, w = item.caracteristica.w;
+const { nome: n, preco: p, caracteristica: { w } } = item;
 console.log('n', n);
 console.log('p', p);
 console.log('w', w);
 // template string
-var usuarioID = 'SuporteCod3r';
-var notificacoes = '19';
-var boasVindas = 'Boas vindas ' + usuarioID + 'Notificações: ' + notificacoes;
+const usuarioID = 'SuporteCod3r';
+const notificacoes = '19';
+const boasVindas = 'Boas vindas ' + usuarioID + 'Notificações: ' + notificacoes;
 console.log('boasVindas', boasVindas);
-var boasVindasTemplateString = "\n            Boas vindas " + usuarioID + ", \n            Notifica\u00E7\u00F5es: " + (parseInt(notificacoes) > 9 ? '+9' : notificacoes);
+const boasVindasTemplateString = `
+            Boas vindas ${usuarioID}, 
+            Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}`;
 console.log('boasVindasTemplateString', boasVindasTemplateString);
-console.log('templateString', "" + (1 + 1) * 30);
-console.log('templateString', "Mtoro :" + caracteristica[0]);
+console.log('templateString', `${(1 + 1) * 30}`);
+console.log('templateString', `Mtoro :${caracteristica[0]}`);
 //Desafio
 // Exercicio 1
 // var dobro = function(valor) {
@@ -141,7 +133,7 @@ console.log('templateString', "Mtoro :" + caracteristica[0]);
 // };
 // console.log(dobro(10));
 //Resposta
-var dobro = function (valor) { return valor * 2; };
+const dobro = (valor) => valor * 2;
 console.log(dobro(10));
 // Exercicio 2
 // var dizerOla = function(nome) {
@@ -153,8 +145,7 @@ console.log(dobro(10));
 // dizerOla();
 // dizerOla('Anna');
 //Resposta
-var dizerOla = function (nome) {
-    if (nome === void 0) { nome = 'Pessoa'; }
+const dizerOla = (nome = 'Pessoa') => {
     if (nome === undefined) {
         nome = 'Pessoa';
     }
@@ -167,14 +158,14 @@ dizerOla('Anna');
 // Imprimir menor valor
 // console.log('???');
 //resposta
-var nums = [-3, 33, 38, 5];
-console.log('Menor valor ', Math.min.apply(Math, nums));
+const nums = [-3, 33, 38, 5];
+console.log('Menor valor ', Math.min(...nums));
 // Exercicio 4
 // var array = [55, 20];
 // Adicionar todos os elementos de "nums" em array
 // console.log(array);
 //Resposta
-var array = [55, 20].concat(nums);
+const array = [55, 20, ...nums];
 console.log(array);
 // Exercicio 5
 // var notas = [8.5, 6.3, 9.4];
@@ -183,8 +174,8 @@ console.log(array);
 // var notas3 = notas[2];
 // console.log(nota1, nota2, nota3);
 //Resposta
-var notas = [8.5, 6.3, 9.4];
-var notas1 = notas[0], notas2 = notas[1], notas3 = notas[2];
+const notas = [8.5, 6.3, 9.4];
+const [notas1, notas2, notas3] = notas;
 console.log(notas1, notas2, notas3);
 // Exercicio 6
 // var cientista = { primeiroNome: 'Will', experiencia: 12 };
@@ -192,9 +183,34 @@ console.log(notas1, notas2, notas3);
 // var experiencia = cientista.experiencia;
 // console.log(primeiroNome, experiencia);
 //Resposta
-var cientista = {
+const cientista = {
     primeiroNome: 'Will',
     experiencia: 12
 };
-var primeiroNome = cientista.primeiroNome, experiencia = cientista.experiencia;
+const { primeiroNome, experiencia } = cientista;
 console.log(primeiroNome, experiencia);
+// Promises
+// trabalhava antigamente com Callback
+function esperar3s(Callback) {
+    setTimeout(() => {
+        Callback('3s depois...');
+    }, 3000);
+}
+esperar3s(function (resultado) {
+    console.log('resultado(callback na function esperar3s):', resultado);
+});
+// convertendo para Promise
+function esperar3sPromise() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('3s depois...');
+        }, 3000);
+    });
+}
+esperar3sPromise().then(dado => console.log('dado(Usando Promoise):', dado));
+// fetch('https://swapi.co/api/people/1')
+//   .then(response => response.json())
+//   .then(personagem => console.log('dado', personagem.films))
+//   .then(films => fetch(films[0]))
+//   .then(resFilm => resFilm.json())
+//   .then(filme => console.log('filme', filme));

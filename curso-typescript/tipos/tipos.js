@@ -1,30 +1,30 @@
 "use strict";
 //string
-var nome = 'joão';
+let nome = 'joão';
 console.log(nome);
 // numbers
-var idade = 27;
+let idade = 27;
 console.log('idade:', idade);
 idade = 27.5;
 console.log('idade:', idade);
 // boolean
-var possuiHobbies = false;
+let possuiHobbies = false;
 console.log('possuiHobbies', possuiHobbies);
 // tipos explícitos
-var minhaIdade;
+let minhaIdade;
 minhaIdade = 27;
 console.log('typeof minhaIdade', typeof minhaIdade);
 // minhaIdade = "27";
 console.log('typeof minhaIdade', typeof minhaIdade);
 //array
 //array do tipo any[]
-var hobbies = ['Cozinha', 'Pratica esportes'];
+let hobbies = ['Cozinha', 'Pratica esportes'];
 console.log('hobbies[0]:', hobbies[0]);
 console.log('typeof hobbies', typeof hobbies);
 hobbies = [100, 200, 300];
 console.log('hobbies', hobbies);
 //tupla
-var endereco = ['Av Principal', 123, ''];
+let endereco = ['Av Principal', 123, ''];
 console.log('endereco:', endereco);
 endereco = ['Rua Importante', 123, 'Bloco C'];
 console.log('endereco:', endereco);
@@ -38,7 +38,7 @@ var Cor;
     Cor[Cor["Amarelo"] = 103] = "Amarelo";
     Cor[Cor["Vermelho"] = 104] = "Vermelho";
 })(Cor || (Cor = {}));
-var minhaCor = Cor.Verde;
+let minhaCor = Cor.Verde;
 console.log('minhaCor', minhaCor);
 console.log('Cor.Azul', Cor.Azul);
 console.log('Cor.Cinza', Cor.Cinza);
@@ -46,7 +46,7 @@ console.log('Cor.Verde', Cor.Verde);
 console.log('Cor.Amarelo', Cor.Amarelo);
 console.log('Cor.Vermelho', Cor.Vermelho);
 // tipo any
-var carro = 'BMW';
+let carro = 'BMW';
 console.log('carro', carro);
 carro = { marca: 'BMW', ano: 2019 };
 console.log('carro', carro);
@@ -68,10 +68,10 @@ function multiplicar(numA, numB) {
 console.log('multiplicar(2,5)', multiplicar(2, 5));
 // tipo função
 // notação arrow para definir
-var teste = function (a, b) {
+const teste = function (a, b) {
     return true;
 };
-var calculo;
+let calculo;
 // calculo = digaOi;
 // console.log(`calculo`);
 // calculo();
@@ -80,7 +80,7 @@ console.log('calculo(5,8)', calculo(5, 8));
 // Objetos e tipos
 // estruturado por chave: valor
 //notação objeto de definição de tipos
-var usuario = {
+let usuario = {
     nome: 'joão',
     idade: 27
 };
@@ -104,9 +104,9 @@ console.log('usuario:', usuario);
  *        -> Ponto normal ( <= 8 )
  *        -> Fora do horário ( > 8 )
  */
-var funcionario = {
+let funcionario = {
     supervisores: ['Joaquim', 'jujé', 'juaum', 'jaum'],
-    baterPonto: function (hora) {
+    baterPonto: (hora) => {
         return hora > 8 ? 'Fora do horário' : 'Ponto normal';
     }
 };
@@ -116,9 +116,9 @@ console.log('funcionario.supervisores', funcionario.baterPonto(10));
 console.log('funcionario.supervisores', funcionario.baterPonto(5));
 // outro modelo de reposta
 console.log('Resposta do professor');
-var funcionarioResposta = {
+let funcionarioResposta = {
     supervisores: ['Ana', 'Fernando'],
-    baterPonto: function (horario) {
+    baterPonto(horario) {
         if (horario <= 8) {
             return 'Ponto Normal';
         }
@@ -130,9 +130,9 @@ var funcionarioResposta = {
 console.log('funcionarioResposta.supervisores', funcionarioResposta.supervisores);
 console.log('funcionarioResposta.baterPonto(8)', funcionarioResposta.baterPonto(8));
 console.log('funcionarioResposta.baterPonto(9)', funcionarioResposta.baterPonto(9));
-var Funcionario2 = {
+let Funcionario2 = {
     supervisores: ['Bia', 'Carlos'],
-    baterPonto: function (horario) {
+    baterPonto(horario) {
         if (horario <= 8) {
             return 'Ponto Normal';
         }
@@ -142,12 +142,12 @@ var Funcionario2 = {
     }
 };
 // Union Types
-var nota = 10;
-console.log("Minha nota \u00E9 " + nota + "!(number)");
+let nota = 10;
+console.log(`Minha nota é ${nota}!(number)`);
 nota = '10';
-console.log("Minha nota \u00E9 " + nota + "!(string)");
+console.log(`Minha nota é ${nota}!(string)`);
 // checando tipos em runtime
-var valor = 30;
+let valor = 30;
 if (typeof valor === 'number') {
     console.log('esse valor é um number !');
 }
@@ -159,10 +159,10 @@ else {
 function falha(msg) {
     throw new Error(msg);
 }
-var produto = {
+const produto = {
     nome: 'Sabão',
     preco: 8,
-    validarProduto: function () {
+    validarProduto() {
         if (!this.nome || this.nome.trim().length == 0) {
             falha('Precisa ter um nome');
         }
@@ -173,9 +173,9 @@ var produto = {
 };
 produto.validarProduto();
 // valores opcionais como null
-var alturaOpcional = 12;
+let alturaOpcional = 12;
 alturaOpcional = null;
-var contato1 = {
+const contato1 = {
     nome: 'Fulano',
     tel1: '982452',
     tel2: null
@@ -183,7 +183,7 @@ var contato1 = {
 console.log('contato1.nome', contato1.nome);
 console.log('contato1.tel1', contato1.tel1);
 console.log('contato1.tel2', contato1.nome);
-var podeSerNulo = null;
+let podeSerNulo = null;
 podeSerNulo = 12;
 console.log('podeSerNulo', podeSerNulo);
 podeSerNulo = 'abc';
@@ -208,13 +208,13 @@ console.log('Desafio sem formatação: ', correntista);
  */
 //  minha resposta
 console.log('minha resposta ');
-var contaBancaria = {
+const contaBancaria = {
     saldo: 3456,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo += valor;
     }
 };
-var ana = {
+let ana = {
     nome: 'Ana Silva',
     contaBancaria: contaBancaria,
     contatos: ['34567890', '98765432']
@@ -224,13 +224,13 @@ ana.contaBancaria.depositar(3000);
 console.log(ana);
 /* Resposta Professor */
 console.log('Resposta Professor');
-var contaBancariaR = {
+let contaBancariaR = {
     saldo: 3456,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo += valor;
     }
 };
-var correntista = {
+let correntista = {
     nome: 'Ana Silva',
     contaBancaria: contaBancariaR,
     contatos: ['34567890', '98765432']

@@ -1,23 +1,23 @@
 "use strict";
-var canal = 'Gaveta';
-var inscritos = 610234;
+let canal = 'Gaveta';
+let inscritos = 610234;
 //canal = inscritos;
-console.log("Canal = " + canal);
+console.log(`Canal = ${canal}`);
 // nome = 'Pedro';
 // console.log(`Nome: ${nome}`);
 // função auto-invocada
 (function () {
-    var nome = 'Ana';
+    let nome = 'Ana';
 })();
 /// evitando 'any' implícito
 function soma(a, b) {
     return a + b;
 }
-var qualquerCoisa;
+let qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'abc';
 function saudaer(isManha) {
-    var saudacao;
+    let saudacao;
     if (isManha) {
         saudacao = 'Bom dia!';
     }
