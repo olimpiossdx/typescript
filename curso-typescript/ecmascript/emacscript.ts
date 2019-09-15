@@ -69,3 +69,19 @@ falarCom('Jujé');
 // console.log('this', this);
 // const arrowComThis = () => console.log('this', this);
 // arrowComThis();
+
+// Parâmetros padrão
+
+function contagemRegressiva(
+  inicio: number = 3,
+  fim: number = inicio - 5
+): void {
+  console.log('inicio', inicio);
+  while (inicio >= fim) {
+    inicio--;
+    console.log('inicio', inicio);
+  }
+  console.log('fim');
+}
+contagemRegressiva();
+contagemRegressiva(5);
