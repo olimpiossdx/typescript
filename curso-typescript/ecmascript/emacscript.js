@@ -27,3 +27,14 @@ for (var i = 0; i < 10; i++) {
     console.log('i =', i);
 }
 // console.log('i', i);
+// Arrow Function
+var somar = function (n1, n2) {
+    return n1 + n2;
+};
+//ou
+// function somar(n1: number, n2: number) {
+//     return n1 + n2;
+//   };
+console.log('somar(2,2)', somar(2, 2));
+var subtrair = function (n1, n2) { return n1 - n2; };
+console.log('subtrair(3,2)', subtrair(3, 2));
