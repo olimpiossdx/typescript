@@ -116,3 +116,46 @@ usuario = {
   nome: "Maria"
 };
 console.log("usuario:", usuario);
+
+// Desafio
+/**
+ * Criar um objeto funcionário com:
+ *  - Array de strings com os nomes dos supervisores
+ *  - Função de bater ponto que recebe a hora (número)
+ *        e retorna uma string
+ *        -> Ponto normal ( <= 8 )
+ *        -> Fora do horário ( > 8 )
+ */
+let funcionario: {
+  supervisores: string[];
+  baterPonto: (hora: number) => string;
+} = {
+  supervisores: ["Joaquim", "jujé", "juaum", "jaum"],
+  baterPonto: (hora: number) => {
+    return hora > 8 ? "Fora do horário" : "Ponto normal";
+  }
+};
+console.log("minhaResposta");
+console.log("funcionario.supervisores", funcionario.supervisores);
+console.log("funcionario.supervisores", funcionario.baterPonto(10));
+console.log("funcionario.supervisores", funcionario.baterPonto(5));
+
+// outro modelo de reposta
+console.log("Resposta do professor");
+let Funcionario: {
+  supervisores: string[];
+  baterPonto: (hora: number) => string;
+} = {
+  supervisores: ["Ana", "Fernando"],
+  baterPonto(horario: number): string {
+    if (horario <= 8) {
+      return "Ponto Normal";
+    } else {
+      return "Fora do horário";
+    }
+  }
+};
+
+console.log("Funcionario.supervisores", Funcionario.supervisores);
+console.log("Funcionario.baterPonto(8)", Funcionario.baterPonto(8));
+console.log("Funcionario.baterPonto(9)", Funcionario.baterPonto(9));
