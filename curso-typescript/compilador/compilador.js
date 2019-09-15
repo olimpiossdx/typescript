@@ -1,4 +1,5 @@
 "use strict";
+console.log('\n Compilador \n\n');
 let canal = 'Gaveta';
 let inscritos = 610234;
 //canal = inscritos;

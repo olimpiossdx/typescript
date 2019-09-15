@@ -1,3 +1,4 @@
+console.log('\n Compilador \n\n');
 let canal: string = 'Gaveta';
 let inscritos: number = 610234;
 
