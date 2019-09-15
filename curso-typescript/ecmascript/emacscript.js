@@ -76,3 +76,14 @@ console.log('Math.max(spread)', Math.max.apply(Math, numbers));
 var turmaA = ['João', 'Maria', 'Fernanda'];
 var turmaB = ['Fernando', 'Miguel', 'Lorena'].concat(turmaA);
 console.log('turmaB', turmaB);
+// operador rest !!
+function retornarArray() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return args;
+}
+var numeros = retornarArray(1, 2, 3, 4, 5, 6);
+console.log('numeros', numeros);
+console.log('retornarArray()', retornarArray.apply(void 0, numbers));
