@@ -87,3 +87,18 @@ function retornarArray() {
 var numeros = retornarArray(1, 2, 3, 4, 5, 6);
 console.log('numeros', numeros);
 console.log('retornarArray()', retornarArray.apply(void 0, numbers));
+// Rest e Spread (tupla)
+var tupla = [1, 'abc', false];
+function tuplaParam1(a, b, c) {
+    console.log("1) " + a + " " + b + " " + c);
+}
+tuplaParam1.apply(void 0, tupla);
+function tuplaParam2() {
+    var params = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        params[_i] = arguments[_i];
+    }
+    console.log('Array.isArray(params)', Array.isArray(params));
+    console.log("2) " + params[0] + " " + params[1] + " " + params[2]);
+}
+tuplaParam2.apply(void 0, tupla);
