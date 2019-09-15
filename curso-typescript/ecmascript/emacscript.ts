@@ -173,3 +173,77 @@ const boasVindasTemplateString = `
 console.log('boasVindasTemplateString', boasVindasTemplateString);
 console.log('templateString', `${(1 + 1) * 30}`);
 console.log('templateString', `Mtoro :${caracteristica[0]}`);
+
+//Desafio
+// Exercicio 1
+// var dobro = function(valor) {
+//   return valor * 2;
+// };
+// console.log(dobro(10));
+//Resposta
+const dobro = (valor: number) => valor * 2;
+
+console.log(dobro(10));
+
+// Exercicio 2
+// var dizerOla = function(nome) {
+//   if (nome === undefined) {
+//     nome = 'Pessoa';
+//   }
+//   console.log('Ola, ' + nome);
+// };
+
+// dizerOla();
+// dizerOla('Anna');
+
+//Resposta
+
+const dizerOla = (nome: string = 'Pessoa'): void => {
+  if (nome === undefined) {
+    nome = 'Pessoa';
+  }
+  console.log('Ola, ' + nome);
+};
+
+dizerOla();
+dizerOla('Anna');
+
+// Exercicio 3
+// var nums = [-3, 33, 38, 5];
+// Imprimir menor valor
+// console.log('???');
+//resposta
+const nums: number[] = [-3, 33, 38, 5];
+console.log('Menor valor ', Math.min(...nums));
+
+// Exercicio 4
+// var array = [55, 20];
+// Adicionar todos os elementos de "nums" em array
+// console.log(array);
+//Resposta
+const array: number[] = [55, 20, ...nums];
+console.log(array);
+
+// Exercicio 5
+// var notas = [8.5, 6.3, 9.4];
+// var notas1 = notas[0];
+// var notas2 = notas[1];
+// var notas3 = notas[2];
+// console.log(nota1, nota2, nota3);
+//Resposta
+const notas: number[] = [8.5, 6.3, 9.4];
+const [notas1, notas2, notas3] = notas;
+console.log(notas1, notas2, notas3);
+
+// Exercicio 6
+// var cientista = { primeiroNome: 'Will', experiencia: 12 };
+// var primeiroNome = cientista.primeiroNome;
+// var experiencia = cientista.experiencia;
+// console.log(primeiroNome, experiencia);
+//Resposta
+const cientista: { primeiroNome: string; experiencia: number } = {
+  primeiroNome: 'Will',
+  experiencia: 12
+};
+const { primeiroNome, experiencia } = cientista;
+console.log(primeiroNome, experiencia);
