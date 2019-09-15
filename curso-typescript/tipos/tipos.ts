@@ -82,6 +82,7 @@ console.log("multiplicar(2,5)", multiplicar(2, 5));
 
 // tipo função
 
+// notação arrow para definir
 const teste = function(a: number, b: number): boolean {
   return true;
 };
@@ -92,3 +93,26 @@ let calculo: (numeroA: number, numeroB: number) => number;
 
 calculo = multiplicar;
 console.log("calculo(5,8)", calculo(5, 8));
+
+// Objetos e tipos
+// estruturado por chave: valor
+
+//notação objeto de definição de tipos
+let usuario: { nome: string; idade: number } = {
+  nome: "joão",
+  idade: 27
+};
+
+console.log("usuario:", usuario);
+// usuario = {}
+
+// usuario = {
+//   name: 'Maria',
+//   age: 31
+// }
+
+usuario = {
+  idade: 31,
+  nome: "Maria"
+};
+console.log("usuario:", usuario);

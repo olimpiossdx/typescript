@@ -67,6 +67,7 @@ function multiplicar(numA, numB) {
 // console.log("multiplicar(2,'Bia')", multiplicar(2, "Bia"));
 console.log("multiplicar(2,5)", multiplicar(2, 5));
 // tipo função
+// notação arrow para definir
 var teste = function (a, b) {
     return true;
 };
@@ -76,3 +77,21 @@ var calculo;
 // calculo();
 calculo = multiplicar;
 console.log("calculo(5,8)", calculo(5, 8));
+// Objetos e tipos
+// estruturado por chave: valor
+//notação objeto de definição de tipos
+var usuario = {
+    nome: "joão",
+    idade: 27
+};
+console.log("usuario:", usuario);
+// usuario = {}
+// usuario = {
+//   name: 'Maria',
+//   age: 31
+// }
+usuario = {
+    idade: 31,
+    nome: "Maria"
+};
+console.log("usuario:", usuario);
