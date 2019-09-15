@@ -188,3 +188,52 @@ podeSerNulo = 12;
 console.log('podeSerNulo', podeSerNulo);
 podeSerNulo = 'abc';
 console.log('podeSerNulo', podeSerNulo);
+// Desafio aplicar tipos
+/*
+  let contaBancaria = {
+  saldo: 3456,
+  depositar(valor) {
+    this.saldo += valor;
+  }
+};
+
+let correntista = {
+  nome: 'Ana Silva',
+  contaBancaria: contaBancaria,
+  contatos: ['34567890', '98765432']
+};
+
+correntista.contaBancaria.depositar(3000);
+console.log('Desafio sem formatação: ', correntista);
+ */
+//  minha resposta
+console.log('minha resposta ');
+var contaBancaria = {
+    saldo: 3456,
+    depositar: function (valor) {
+        this.saldo += valor;
+    }
+};
+var ana = {
+    nome: 'Ana Silva',
+    contaBancaria: contaBancaria,
+    contatos: ['34567890', '98765432']
+};
+ana.contaBancaria.saldo = 3456;
+ana.contaBancaria.depositar(3000);
+console.log(ana);
+/* Resposta Professor */
+console.log('Resposta Professor');
+var contaBancariaR = {
+    saldo: 3456,
+    depositar: function (valor) {
+        this.saldo += valor;
+    }
+};
+var correntista = {
+    nome: 'Ana Silva',
+    contaBancaria: contaBancariaR,
+    contatos: ['34567890', '98765432']
+};
+correntista.contaBancaria.depositar(3000);
+console.log('correntista;', correntista);
