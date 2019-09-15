@@ -116,7 +116,7 @@ console.log("funcionario.supervisores", funcionario.baterPonto(10));
 console.log("funcionario.supervisores", funcionario.baterPonto(5));
 // outro modelo de reposta
 console.log("Resposta do professor");
-var Funcionario = {
+var funcionarioResposta = {
     supervisores: ["Ana", "Fernando"],
     baterPonto: function (horario) {
         if (horario <= 8) {
@@ -127,6 +127,17 @@ var Funcionario = {
         }
     }
 };
-console.log("Funcionario.supervisores", Funcionario.supervisores);
-console.log("Funcionario.baterPonto(8)", Funcionario.baterPonto(8));
-console.log("Funcionario.baterPonto(9)", Funcionario.baterPonto(9));
+console.log("funcionarioResposta.supervisores", funcionarioResposta.supervisores);
+console.log("funcionarioResposta.baterPonto(8)", funcionarioResposta.baterPonto(8));
+console.log("funcionarioResposta.baterPonto(9)", funcionarioResposta.baterPonto(9));
+var Funcionario2 = {
+    supervisores: ["Bia", "Carlos"],
+    baterPonto: function (horario) {
+        if (horario <= 8) {
+            return "Ponto Normal";
+        }
+        else {
+            return "Fora do horário";
+        }
+    }
+};
