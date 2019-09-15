@@ -1,33 +1,33 @@
 "use strict";
 //string
-var nome = "joão";
+var nome = 'joão';
 console.log(nome);
 // numbers
 var idade = 27;
-console.log("idade:", idade);
+console.log('idade:', idade);
 idade = 27.5;
-console.log("idade:", idade);
+console.log('idade:', idade);
 // boolean
 var possuiHobbies = false;
-console.log("possuiHobbies", possuiHobbies);
+console.log('possuiHobbies', possuiHobbies);
 // tipos explícitos
 var minhaIdade;
 minhaIdade = 27;
-console.log("typeof minhaIdade", typeof minhaIdade);
+console.log('typeof minhaIdade', typeof minhaIdade);
 // minhaIdade = "27";
-console.log("typeof minhaIdade", typeof minhaIdade);
+console.log('typeof minhaIdade', typeof minhaIdade);
 //array
 //array do tipo any[]
-var hobbies = ["Cozinha", "Pratica esportes"];
-console.log("hobbies[0]:", hobbies[0]);
-console.log("typeof hobbies", typeof hobbies);
+var hobbies = ['Cozinha', 'Pratica esportes'];
+console.log('hobbies[0]:', hobbies[0]);
+console.log('typeof hobbies', typeof hobbies);
 hobbies = [100, 200, 300];
-console.log("hobbies", hobbies);
+console.log('hobbies', hobbies);
 //tupla
-var endereco = ["Av Principal", 123, ""];
-console.log("endereco:", endereco);
-endereco = ["Rua Importante", 123, "Bloco C"];
-console.log("endereco:", endereco);
+var endereco = ['Av Principal', 123, ''];
+console.log('endereco:', endereco);
+endereco = ['Rua Importante', 123, 'Bloco C'];
+console.log('endereco:', endereco);
 // enums
 var Cor;
 (function (Cor) {
@@ -39,25 +39,25 @@ var Cor;
     Cor[Cor["Vermelho"] = 104] = "Vermelho";
 })(Cor || (Cor = {}));
 var minhaCor = Cor.Verde;
-console.log("minhaCor", minhaCor);
-console.log("Cor.Azul", Cor.Azul);
-console.log("Cor.Cinza", Cor.Cinza);
-console.log("Cor.Verde", Cor.Verde);
-console.log("Cor.Amarelo", Cor.Amarelo);
-console.log("Cor.Vermelho", Cor.Vermelho);
+console.log('minhaCor', minhaCor);
+console.log('Cor.Azul', Cor.Azul);
+console.log('Cor.Cinza', Cor.Cinza);
+console.log('Cor.Verde', Cor.Verde);
+console.log('Cor.Amarelo', Cor.Amarelo);
+console.log('Cor.Vermelho', Cor.Vermelho);
 // tipo any
-var carro = "BMW";
-console.log("carro", carro);
-carro = { marca: "BMW", ano: 2019 };
-console.log("carro", carro);
+var carro = 'BMW';
+console.log('carro', carro);
+carro = { marca: 'BMW', ano: 2019 };
+console.log('carro', carro);
 //funções
 function retornaMeuNome() {
     // return minhaIdade;
     return nome;
 }
-console.log("retornaMeuNome()", retornaMeuNome());
+console.log('retornaMeuNome()', retornaMeuNome());
 function digaOi() {
-    console.log("oi");
+    console.log('oi');
     // return minhaIdade
 }
 digaOi();
@@ -65,7 +65,7 @@ function multiplicar(numA, numB) {
     return numA * numB;
 }
 // console.log("multiplicar(2,'Bia')", multiplicar(2, "Bia"));
-console.log("multiplicar(2,5)", multiplicar(2, 5));
+console.log('multiplicar(2,5)', multiplicar(2, 5));
 // tipo função
 // notação arrow para definir
 var teste = function (a, b) {
@@ -76,15 +76,15 @@ var calculo;
 // console.log(`calculo`);
 // calculo();
 calculo = multiplicar;
-console.log("calculo(5,8)", calculo(5, 8));
+console.log('calculo(5,8)', calculo(5, 8));
 // Objetos e tipos
 // estruturado por chave: valor
 //notação objeto de definição de tipos
 var usuario = {
-    nome: "joão",
+    nome: 'joão',
     idade: 27
 };
-console.log("usuario:", usuario);
+console.log('usuario:', usuario);
 // usuario = {}
 // usuario = {
 //   name: 'Maria',
@@ -92,9 +92,9 @@ console.log("usuario:", usuario);
 // }
 usuario = {
     idade: 31,
-    nome: "Maria"
+    nome: 'Maria'
 };
-console.log("usuario:", usuario);
+console.log('usuario:', usuario);
 // Desafio
 /**
  * Criar um objeto funcionário com:
@@ -105,52 +105,70 @@ console.log("usuario:", usuario);
  *        -> Fora do horário ( > 8 )
  */
 var funcionario = {
-    supervisores: ["Joaquim", "jujé", "juaum", "jaum"],
+    supervisores: ['Joaquim', 'jujé', 'juaum', 'jaum'],
     baterPonto: function (hora) {
-        return hora > 8 ? "Fora do horário" : "Ponto normal";
+        return hora > 8 ? 'Fora do horário' : 'Ponto normal';
     }
 };
-console.log("minhaResposta");
-console.log("funcionario.supervisores", funcionario.supervisores);
-console.log("funcionario.supervisores", funcionario.baterPonto(10));
-console.log("funcionario.supervisores", funcionario.baterPonto(5));
+console.log('minhaResposta');
+console.log('funcionario.supervisores', funcionario.supervisores);
+console.log('funcionario.supervisores', funcionario.baterPonto(10));
+console.log('funcionario.supervisores', funcionario.baterPonto(5));
 // outro modelo de reposta
-console.log("Resposta do professor");
+console.log('Resposta do professor');
 var funcionarioResposta = {
-    supervisores: ["Ana", "Fernando"],
+    supervisores: ['Ana', 'Fernando'],
     baterPonto: function (horario) {
         if (horario <= 8) {
-            return "Ponto Normal";
+            return 'Ponto Normal';
         }
         else {
-            return "Fora do horário";
+            return 'Fora do horário';
         }
     }
 };
-console.log("funcionarioResposta.supervisores", funcionarioResposta.supervisores);
-console.log("funcionarioResposta.baterPonto(8)", funcionarioResposta.baterPonto(8));
-console.log("funcionarioResposta.baterPonto(9)", funcionarioResposta.baterPonto(9));
+console.log('funcionarioResposta.supervisores', funcionarioResposta.supervisores);
+console.log('funcionarioResposta.baterPonto(8)', funcionarioResposta.baterPonto(8));
+console.log('funcionarioResposta.baterPonto(9)', funcionarioResposta.baterPonto(9));
 var Funcionario2 = {
-    supervisores: ["Bia", "Carlos"],
+    supervisores: ['Bia', 'Carlos'],
     baterPonto: function (horario) {
         if (horario <= 8) {
-            return "Ponto Normal";
+            return 'Ponto Normal';
         }
         else {
-            return "Fora do horário";
+            return 'Fora do horário';
         }
     }
 };
 // Union Types
 var nota = 10;
 console.log("Minha nota \u00E9 " + nota + "!(number)");
-nota = "10";
+nota = '10';
 console.log("Minha nota \u00E9 " + nota + "!(string)");
 // checando tipos em runtime
 var valor = 30;
-if (typeof valor === "number") {
-    console.log("esse valor é um number !");
+if (typeof valor === 'number') {
+    console.log('esse valor é um number !');
 }
 else {
-    console.log("typeof valor", typeof valor);
+    console.log('typeof valor', typeof valor);
 }
+// tipo de retorno never (função que nunca vai retornar )
+// pode ser usado para criar método personalizado de error em métodos e funções
+function falha(msg) {
+    throw new Error(msg);
+}
+var produto = {
+    nome: 'Sabão',
+    preco: 8,
+    validarProduto: function () {
+        if (!this.nome || this.nome.trim().length == 0) {
+            falha('Precisa ter um nome');
+        }
+        if (this.preco <= 0) {
+            falha('Preço inválido!');
+        }
+    }
+};
+produto.validarProduto();
