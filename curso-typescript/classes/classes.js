@@ -39,9 +39,19 @@ class Produto {
         this.preco = preco;
         this.desconto = desconto;
     }
+    // Criar método precoComDesconto
+    // Quais são os parâmetros e o retorno?
+    // Alterar métdodo resumo para mostar o preço com desconto
+    precoComDesconto() {
+        return this.preco * (1 - this.desconto);
+    }
+    resumo() {
+        return `${this.nome} custa R$${this.precoComDesconto()} (${this.desconto *
+            100}% off)`;
+    }
 }
 const prod1 = new Produto('Caneta Bic Preta', 4.2);
 prod1.desconto = 0.06;
-console.log('prod1:', prod1);
+console.log('prod1:', prod1.resumo());
 const prod2 = new Produto('Caderno Escolar', 18.8, 0.15);
-console.log('prod2:', prod2);
+console.log('prod2:', prod2.resumo());
