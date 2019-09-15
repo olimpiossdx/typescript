@@ -185,3 +185,9 @@ let Funcionario2: Funcionario = {
     }
   }
 };
+
+// Union Types
+let nota: number | string = 10;
+console.log(`Minha nota é ${nota}!(number)`);
+nota = "10";
+console.log(`Minha nota é ${nota}!(string)`);
