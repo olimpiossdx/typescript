@@ -56,13 +56,23 @@ function retornaMeuNome() {
     return nome;
 }
 console.log("retornaMeuNome()", retornaMeuNome());
-function DigaOi() {
+function digaOi() {
     console.log("oi");
     // return minhaIdade
 }
-DigaOi();
+digaOi();
 function multiplicar(numA, numB) {
     return numA * numB;
 }
 // console.log("multiplicar(2,'Bia')", multiplicar(2, "Bia"));
 console.log("multiplicar(2,5)", multiplicar(2, 5));
+// tipo função
+var teste = function (a, b) {
+    return true;
+};
+var calculo;
+// calculo = digaOi;
+// console.log(`calculo`);
+// calculo();
+calculo = multiplicar;
+console.log("calculo(5,8)", calculo(5, 8));

@@ -67,15 +67,28 @@ function retornaMeuNome(): string {
 }
 console.log("retornaMeuNome()", retornaMeuNome());
 
-function DigaOi(): void {
+function digaOi(): void {
   console.log("oi");
   // return minhaIdade
 }
 
-DigaOi();
+digaOi();
 
 function multiplicar(numA: number, numB: number): number {
   return numA * numB;
 }
 // console.log("multiplicar(2,'Bia')", multiplicar(2, "Bia"));
 console.log("multiplicar(2,5)", multiplicar(2, 5));
+
+// tipo função
+
+const teste = function(a: number, b: number): boolean {
+  return true;
+};
+let calculo: (numeroA: number, numeroB: number) => number;
+// calculo = digaOi;
+// console.log(`calculo`);
+// calculo();
+
+calculo = multiplicar;
+console.log("calculo(5,8)", calculo(5, 8));
