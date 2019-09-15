@@ -12,3 +12,23 @@ console.log(`Canal = ${canal}`);
 (function() {
   let nome: string = 'Ana';
 })();
+
+/// evitando 'any' implícito
+
+function soma(a: any, b: any) {
+  return a + b;
+}
+let qualquerCoisa;
+qualquerCoisa = 12;
+qualquerCoisa = 'abc';
+
+function saudaer(isManha: boolean) {
+  let saudacao: string;
+
+  if (isManha) {
+    saudacao = 'Bom dia!';
+  } else {
+    saudacao = 'tenha uma boa vinda!';
+  }
+  return saudacao;
+}

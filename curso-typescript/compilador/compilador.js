@@ -9,3 +9,20 @@ console.log("Canal = " + canal);
 (function () {
     var nome = 'Ana';
 })();
+/// evitando 'any' implícito
+function soma(a, b) {
+    return a + b;
+}
+var qualquerCoisa;
+qualquerCoisa = 12;
+qualquerCoisa = 'abc';
+function saudaer(isManha) {
+    var saudacao;
+    if (isManha) {
+        saudacao = 'Bom dia!';
+    }
+    else {
+        saudacao = 'tenha uma boa vinda!';
+    }
+    return saudacao;
+}
