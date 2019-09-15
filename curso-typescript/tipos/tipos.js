@@ -172,3 +172,19 @@ var produto = {
     }
 };
 produto.validarProduto();
+// valores opcionais como null
+var alturaOpcional = 12;
+alturaOpcional = null;
+var contato1 = {
+    nome: 'Fulano',
+    tel1: '982452',
+    tel2: null
+};
+console.log('contato1.nome', contato1.nome);
+console.log('contato1.tel1', contato1.tel1);
+console.log('contato1.tel2', contato1.nome);
+var podeSerNulo = null;
+podeSerNulo = 12;
+console.log('podeSerNulo', podeSerNulo);
+podeSerNulo = 'abc';
+console.log('podeSerNulo', podeSerNulo);
