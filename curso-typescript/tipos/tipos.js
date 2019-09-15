@@ -146,3 +146,11 @@ var nota = 10;
 console.log("Minha nota \u00E9 " + nota + "!(number)");
 nota = "10";
 console.log("Minha nota \u00E9 " + nota + "!(string)");
+// checando tipos em runtime
+var valor = 30;
+if (typeof valor === "number") {
+    console.log("esse valor é um number !");
+}
+else {
+    console.log("typeof valor", typeof valor);
+}

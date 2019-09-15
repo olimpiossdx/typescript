@@ -191,3 +191,11 @@ let nota: number | string = 10;
 console.log(`Minha nota é ${nota}!(number)`);
 nota = "10";
 console.log(`Minha nota é ${nota}!(string)`);
+
+// checando tipos em runtime
+let valor = 30;
+if (typeof valor === "number") {
+  console.log("esse valor é um number !");
+} else {
+  console.log("typeof valor", typeof valor);
+}
