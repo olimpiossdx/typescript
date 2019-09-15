@@ -98,3 +98,13 @@ console.log('Math.max(spread)', Math.max(...numbers));
 const turmaA: string[] = ['João', 'Maria', 'Fernanda'];
 const turmaB: string[] = ['Fernando', 'Miguel', 'Lorena', ...turmaA];
 console.log('turmaB', turmaB);
+
+// operador rest !!
+function retornarArray(...args: number[]): number[] {
+  return args;
+}
+
+const numeros = retornarArray(1, 2, 3, 4, 5, 6);
+console.log('numeros', numeros);
+
+console.log('retornarArray()', retornarArray(...numbers));
