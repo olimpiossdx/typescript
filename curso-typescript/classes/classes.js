@@ -55,3 +55,48 @@ prod1.desconto = 0.06;
 console.log('prod1:', prod1.resumo());
 const prod2 = new Produto('Caderno Escolar', 18.8, 0.15);
 console.log('prod2:', prod2.resumo());
+// Modificadores de acesso
+class Carro {
+    constructor(marca, moddelo, velocidadeMaxima = 200) {
+        this.marca = marca;
+        this.moddelo = moddelo;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.velocidadeAtual = 0;
+    }
+    alterarVelocidade(delta) {
+        const novaVelocidade = this.velocidadeAtual + delta;
+        const velocidadeValida = novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
+        if (velocidadeValida) {
+            this.velocidadeAtual = novaVelocidade;
+        }
+        else {
+            this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0;
+        }
+        return this.velocidadeAtual;
+    }
+    acelerar() {
+        return this.alterarVelocidade(5);
+    }
+    /**
+     * frear
+     */
+    frear() {
+        return this.alterarVelocidade(-5);
+    }
+}
+const carro1 = new Carro('Ford', 'ka', 185);
+Array(50)
+    .fill(0)
+    .forEach(() => carro1.acelerar());
+console.log('carro1.acelacelerarear', carro1.acelerar());
+Array(35)
+    .fill(0)
+    .forEach(() => carro1.frear());
+console.log('carro1.frear', carro1.frear());
+/// simular "erros"
+// carro1.velocidadeAtual = 300;
+// console.log('carro1.velocidadeAtual', carro1.velocidadeAtual);
+// carro1.velocidadeMaxima = 500;
+// console.log('carro1.velocidadeMaxima', carro1.velocidadeMaxima);
+// carro1.alterarVelocidade(150);
+// console.log('carro1.velocidadeAtual', carro1.velocidadeAtual);
